@@ -2,38 +2,38 @@
 	const photos = {
 		track: {
 			src: '/whoop_gates/PXL_20260301_030743515.MP.webp',
-			alt: 'Several illuminated whoop gates set up in a parking garage',
-			caption: 'A multi-gate setup under test'
+			alt: 'Lit whoop gates arranged on a course in a parking garage',
+			caption: 'Parking garage course'
 		},
 		foldingJoint: {
 			src: '/whoop_gates/PXL_20260202_054717495.webp',
-			alt: 'Fold-out printed connector gripping a PVC pole',
-			caption: 'Folding connector on the PVC pole'
+			alt: '3D-printed folding joint wrapped around a PVC pole',
+			caption: 'Folding joint'
 		},
 		mr60: {
 			src: '/whoop_gates/PXL_20260202_054705143.webp',
-			alt: 'MR60 connector holder mounted at the top of a PVC gate pole',
-			caption: 'MR60 holder at the top of the pole'
+			alt: 'MR60 connector holder at the top of a PVC gate pole',
+			caption: 'MR60 holder'
 		},
 		power: {
 			src: '/whoop_gates/PXL_20260307_071254745.MP.webp',
-			alt: 'WLED power controller and wiring for multiple gates',
+			alt: 'WLED controller and power splitter wiring for several gates',
 			caption: 'Shared power wiring'
 		},
 		controlBox: {
 			src: '/whoop_gates/20261117_231706.jpg',
-			alt: 'Custom-designed 3D-printed enclosure holding the WLED controller and fuse box beside the power supply',
-			caption: 'Printed WLED and fuse box enclosure'
+			alt: '3D-printed case with the WLED controller and fuse box beside the power supply',
+			caption: 'Controller and fuse box'
 		},
 		lighting: {
 			src: '/whoop_gates/Screenshot_20261117_123210_Photos~2.webp',
-			alt: 'LED strip, WLED controller, power supply, and connecting wires laid out together',
-			caption: 'LED strip and WLED controller'
+			alt: 'LED strip, WLED controller, power supply, and wires on a work surface',
+			caption: 'Lighting components'
 		},
 		indoorTest: {
 			src: '/whoop_gates/PXL_20260211_232045248.MP.webp',
 			alt: 'LED-lit folding gates during an indoor test',
-			caption: 'The gates illuminated for an indoor test'
+			caption: 'Indoor lighting test'
 		}
 	};
 
@@ -67,22 +67,22 @@
 	const controlBoxParts = [
 		{
 			name: '50 A, 600 W, 12 V DC regulated switching power supply',
-			role: 'Converts AC mains power to 12 V DC for the LED system.',
+			role: 'Converts wall power to 12 V DC for the LEDs.',
 			href: 'https://www.amazon.com/dp/B09NJLNYKH'
 		},
 		{
 			name: 'BTF-LIGHTING SP901E addressable LED signal amplifier / repeater',
-			role: 'Repeats the LED control signal for the addressable strips.',
+			role: 'Repeats the control signal for the addressable LED strips.',
 			href: 'https://www.amazon.com/dp/B07RDKRW5T'
 		},
 		{
 			name: '12 V six-way ATO/ATC fuse box with LED indicators',
-			role: 'Each line uses a 10 A automotive fuse for branch overcurrent protection; 50 A is the power supply’s total capacity.',
+			role: 'Each branch has a 10 A automotive fuse. The supply is rated for 50 A total.',
 			href: 'https://www.amazon.com/dp/B08XWQHMZJ'
 		},
 		{
 			name: 'Eternaglo Plus ESP32 WLED controller, 6 outputs, Ethernet, relay terminal',
-			role: 'Runs WLED and provides six LED outputs from one control interface.',
+			role: 'Runs WLED and provides six outputs for the LED strips.',
 			href: 'https://www.amazon.com/dp/B0DBFS6VCP'
 		}
 	];
@@ -91,22 +91,22 @@
 		{
 			number: '01',
 			label: 'Structure & connection',
-			title: 'Fold open. Plug in.',
-			text: 'Every gate uses the same design and parts, so they are interchangeable and easy to arrange as a two- or three-gate stack. The frame uses 3/4-inch, 200 PSI thin-wall PVC instead of Schedule 40 so more LED light passes through the pipe. A custom 3D-printed connector folds at the PVC joint; its slightly undersized fit grips the pole when open. A printed holder at the top keeps the MR60 connector ready to plug in.',
+			title: 'Frame and folding joints',
+			text: 'All gates use the same parts. Arrange them in stacks of two or three gates. The frames use 3/4-inch, 200 PSI thin-wall PVC, which lets more LED light through than Schedule 40 pipe. Each 3D-printed joint folds for storage and grips the pole when open. A printed holder keeps the MR60 connector at the top of the pole.',
 			photos: [photos.foldingJoint, photos.mr60]
 		},
 		{
 			number: '02',
 			label: 'Power & control',
-			title: 'One supply feeds the set.',
-			text: 'Addressable LED strips let me control the entire setup through one WLED interface. Soldered three-way splitters distribute power from one supply to multiple gates, so each gate connects without its own battery. When gates are stacked and connected, account for voltage drop along the LED power run; it can dim LEDs or shift color farther from the supply.',
+			title: 'Power and WLED',
+			text: 'I control the addressable LED strips in WLED. Soldered three-way splitters carry power from one supply to several gates, so they do not need separate batteries. Long power runs can lose voltage and make LEDs at the far end dim or change color.',
 			photos: [photos.lighting, photos.controlBox, photos.power]
 		},
 		{
 			number: '03',
 			label: 'On the course',
-			title: 'A bright outline in low light.',
-			text: 'With the LEDs on, the frames stand out in the room and across the multi-gate setup. The folding joints make the same structure easy to open for a session and close for storage.',
+			title: 'Test run',
+			text: 'I tested the gates indoors and in a parking garage. The lights make the frames visible across the course, and the folding joints make them easier to pack after flying.',
 			photos: [photos.indoorTest]
 		}
 	];
@@ -116,7 +116,7 @@
 	<title>Folding LED Whoop Gates | Jacob Keil</title>
 	<meta
 		name="description"
-		content="Identical folding LED whoop gates that stack for FPV racing, with addressable lighting controlled through one WLED interface and shared power."
+		content="Folding LED whoop gates for FPV racing. Build stacks of two or three gates and control their addressable lighting with one WLED interface and shared power."
 	/>
 	<link rel="canonical" href="https://jacobkeil.com/projects/folding-led-whoop-gates" />
 </svelte:head>
@@ -136,15 +136,15 @@
 
 		<section class="relative grid min-h-[510px] grid-cols-[1fr_1fr] items-center gap-10 overflow-hidden rounded-2xl border border-[#363636] bg-[radial-gradient(ellipse_at_76%_40%,rgb(237_117_90_/_9%),transparent_36%),linear-gradient(140deg,#222_0%,#181818_58%,#1e1917_100%)] p-10 text-paper max-[800px]:grid-cols-1 max-[800px]:gap-7 max-[800px]:p-8 max-[520px]:p-6" aria-labelledby="hero-title">
 			<div class="relative z-[1] py-5 max-[800px]:py-0">
-				<p class="mb-4 text-[.68rem] font-bold tracking-[.15em] text-muted uppercase"><span class="mr-2 inline-block size-[7px] rounded-full bg-accent align-[1px] shadow-[0_0_0_4px_rgb(237_117_90_/_12%)]"></span>FPV racing <span class="px-1 text-muted">/</span> Hardware build</p>
+				<p class="mb-4 text-[.68rem] font-bold tracking-[.15em] text-muted uppercase"><span class="mr-2 inline-block size-[7px] rounded-full bg-accent align-[1px] shadow-[0_0_0_4px_rgb(237_117_90_/_12%)]"></span>FPV racing <span class="px-1 text-muted">/</span> Gate build</p>
 				<h1 id="hero-title" class="mb-5 text-[clamp(2.8rem,5.3vw,4.8rem)] leading-[1.02] font-medium tracking-[-.04em]">Folding LED<br /><span class="text-accent">whoop gates.</span></h1>
-				<p class="mb-7 max-w-[480px] text-[.94rem] leading-[1.8] text-[#c5c5c5]">A set of illuminated gates for FPV whoop racing, built around folding 3D-printed connectors, PVC poles, and shared WLED power.</p>
+				<p class="mb-7 max-w-[480px] text-[.94rem] leading-[1.8] text-[#c5c5c5]">I built these folding gates for FPV whoop racing using PVC poles, 3D-printed joints, and a shared WLED power system.</p>
 				<div class="mb-8 flex flex-wrap gap-[7px]">
 					{#each ['3D-printed joints', 'MR60 connectors', 'WLED lighting', 'Shared supply'] as item}
 						<span class="rounded-md border border-line bg-carbon-black/40 px-2.5 py-[7px] text-[.62rem] font-medium text-[#d0d0d0]">{item}</span>
 					{/each}
 				</div>
-				<a class="inline-flex items-center gap-3 text-[.77rem] font-bold text-paper transition-colors duration-150 hover:text-accent" href="#build">Explore the build <span class="text-accent" aria-hidden="true">↓</span></a>
+				<a class="inline-flex items-center gap-3 text-[.77rem] font-bold text-paper transition-colors duration-150 hover:text-accent" href="#build">See the build details <span class="text-accent" aria-hidden="true">↓</span></a>
 			</div>
 			<figure class="relative m-0 overflow-hidden rounded-[13px] border-[5px] border-[#222] bg-panel-soft shadow-[0_24px_55px_rgb(0_0_0_/_38%)]">
 				<img class="aspect-[1.18/1] w-full object-cover object-center max-[800px]:aspect-[1.6/1] max-[520px]:aspect-[1.25/1]" src={photos.track.src} alt={photos.track.alt} fetchpriority="high" />
@@ -157,8 +157,8 @@
 		<section id="build" class="pt-[70px] pb-[22px] max-[800px]:pt-[55px]" aria-labelledby="build-title">
 			<div class="mb-7 flex items-end justify-between gap-6 max-[520px]:items-start max-[520px]:flex-col max-[520px]:gap-2">
 				<div>
-					<p class="m-0 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-muted uppercase">Project notes</p>
-					<h2 id="build-title" class="mt-[11px] mb-0 text-[clamp(2.2rem,4vw,3.25rem)] leading-tight font-medium tracking-[-.035em]">From frame to light<span class="text-accent">.</span></h2>
+					<p class="m-0 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-muted uppercase">Design and wiring</p>
+					<h2 id="build-title" class="mt-[11px] mb-0 text-[clamp(2.2rem,4vw,3.25rem)] leading-tight font-medium tracking-[-.035em]">How I built the gates<span class="text-accent">.</span></h2>
 				</div>
 				<span class="mb-1 text-[.68rem] text-[#aaaaaa]">Structure · Power · Lighting</span>
 			</div>
@@ -187,8 +187,8 @@
 		<section class="pt-[34px] pb-[54px]" aria-labelledby="parts-title">
 			<div class="mb-6">
 				<p class="m-0 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-muted uppercase">Build materials</p>
-				<h2 id="parts-title" class="mt-[11px] mb-2 text-[clamp(2.2rem,4vw,3.25rem)] leading-tight font-medium tracking-[-.035em]">Gate<span class="text-accent">.</span></h2>
-				<p class="m-0 max-w-[700px] text-[.82rem] leading-[1.8] text-[#c5c5c5]">The per-gate amounts below are the portions of each purchase used for one gate. The listed frame materials total <strong class="text-paper">$11.37 per gate</strong>. Control box components are listed separately below; their prices, wiring, and printed parts are not included in that subtotal.</p>
+				<h2 id="parts-title" class="mt-[11px] mb-2 text-[clamp(2.2rem,4vw,3.25rem)] leading-tight font-medium tracking-[-.035em]">Per-gate cost<span class="text-accent">.</span></h2>
+				<p class="m-0 max-w-[700px] text-[.82rem] leading-[1.8] text-[#c5c5c5]">Prices below show the portion of each purchase used for one gate. The frame materials cost <strong class="text-paper">$11.37 per gate</strong>. This excludes the control box, wiring, and printed parts.</p>
 			</div>
 			<div class="overflow-x-auto rounded-[12px] border border-line">
 				<table class="w-full min-w-[600px] border-collapse text-left text-[.78rem]">
@@ -224,7 +224,7 @@
 			<div class="mb-6">
 				<p class="m-0 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-muted uppercase">System components</p>
 				<h2 id="control-box-title" class="mt-[11px] mb-2 text-[clamp(2.2rem,4vw,3.25rem)] leading-tight font-medium tracking-[-.035em]">Control box<span class="text-accent">.</span></h2>
-				<p class="m-0 max-w-[700px] text-[.82rem] leading-[1.8] text-[#c5c5c5]">These components provide power and WLED control for the addressable lighting setup.</p>
+				<p class="m-0 max-w-[700px] text-[.82rem] leading-[1.8] text-[#c5c5c5]">The box holds the power supply, fuse box, signal amplifier, and WLED controller.</p>
 			</div>
 			<div class="overflow-x-auto rounded-[12px] border border-line">
 				<table class="w-full min-w-[600px] border-collapse text-left text-[.78rem]">
@@ -252,9 +252,9 @@
 			<div class="flex items-center justify-between gap-5 rounded-[14px] border border-line bg-[radial-gradient(ellipse_at_88%_50%,rgb(237_117_90_/_9%),transparent_38%),#242424] px-6 py-5 max-[520px]:flex-col max-[520px]:items-start max-[520px]:gap-3 max-[520px]:px-5 max-[520px]:py-4">
 				<div>
 					<p id="more-projects-title" class="mb-1 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-muted uppercase">More projects</p>
-					<p class="m-0 text-[.82rem] text-[#c5c5c5]">See what else I’ve been building.</p>
+					<p class="m-0 text-[.82rem] text-[#c5c5c5]">See the other projects on my home page.</p>
 				</div>
-				<a class="inline-flex items-center gap-2 rounded-lg border border-line bg-carbon-black/40 px-4 py-3 text-[.78rem] font-semibold text-paper transition-colors duration-150 hover:border-accent hover:text-accent" href="/#projects">Back to projects <span class="text-accent" aria-hidden="true">→</span></a>
+				<a class="inline-flex items-center gap-2 rounded-lg border border-line bg-carbon-black/40 px-4 py-3 text-[.78rem] font-semibold text-paper transition-colors duration-150 hover:border-accent hover:text-accent" href="/#projects">See all projects <span class="text-accent" aria-hidden="true">→</span></a>
 			</div>
 		</section>
 	</main>

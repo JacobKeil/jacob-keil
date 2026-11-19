@@ -22,7 +22,7 @@
 			name: 'Clover Trivia',
 			kind: 'Product · Full stack',
 			description:
-				'A live trivia platform for hosts to build games, manage teams and scores, and share recaps with players.',
+				'Hosts can create live trivia games, track teams and scores, and share recaps with players.',
 			stack: ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Docker'],
 			links: [
 				{ href: 'https://clovertrivia.com/', label: 'Visit the site' },
@@ -35,7 +35,7 @@
 			name: 'Castercurse',
 			kind: 'Product · Streaming',
 			description:
-				'A watch-party experience for following multiple streams, with per-stream volume and flexible layouts.',
+				'Lets viewers watch several streams at once, adjust each stream’s volume, and arrange them on screen.',
 			stack: ['SvelteKit', 'Twitch OAuth', 'Docker'],
 			links: [{ href: 'https://github.com/JacobKeil/castercurse', label: 'View on GitHub' }],
 			visual: 'caster'
@@ -45,9 +45,9 @@
 			name: 'Folding LED Whoop Gates',
 			kind: 'FPV racing · Hardware',
 			description:
-				'Every gate shares the same folding design and can be arranged in two- or three-gate stacks. Addressable LEDs are controlled through one WLED interface, with soldered splitters sharing a power supply across the setup.',
+				'Folding LED gates for FPV racing. Arrange them in stacks of two or three gates, with one WLED controller and power supply for the lights.',
 			stack: ['3D printing', 'WLED', 'LEDs', 'Soldering', 'MR60', 'Power distribution'],
-			links: [{ href: '/projects/folding-led-whoop-gates', label: 'Explore the build' }],
+			links: [{ href: '/projects/folding-led-whoop-gates', label: 'See the gate build' }],
 			visual: 'gates'
 		}
 	];
@@ -55,8 +55,8 @@
 	const gatePhotos: GalleryPhoto[] = [
 		{
 			src: '/whoop_gates/PXL_20260301_030743515.MP.webp',
-			alt: 'Several illuminated whoop gates set up in a parking garage',
-			caption: 'Multi-gate setup'
+			alt: 'Lit whoop gates arranged in a parking garage',
+			caption: 'Gate course'
 		},
 		{
 			src: '/whoop_gates/PXL_20260202_054705143.webp',
@@ -70,8 +70,8 @@
 		},
 		{
 			src: '/whoop_gates/PXL_20260211_232045248.MP.webp',
-			alt: 'LED-lit folding gates during an indoor test',
-			caption: 'LED test'
+			alt: 'Folding gates lit during an indoor test',
+			caption: 'Indoor lighting test'
 		},
 		{
 			src: '/whoop_gates/PXL_20260307_071254745.MP.webp',
@@ -80,8 +80,8 @@
 		},
 		{
 			src: '/whoop_gates/20261117_231706.jpg',
-			alt: 'Custom-designed 3D-printed enclosure holding the WLED controller and fuse box beside the power supply',
-			caption: 'Printed WLED and fuse box enclosure'
+			alt: '3D-printed case with the WLED controller and fuse box beside the power supply',
+			caption: 'Controller and fuse box'
 		},
 		{
 			src: '/whoop_gates/Screenshot_20261117_123210_Photos~2.webp',
@@ -225,14 +225,14 @@
 	<title>Jacob Keil | Software &amp; Systems Engineer</title>
 	<meta
 		name="description"
-		content="Jacob Keil works across software, IT systems, and hands-on embedded projects, including custom FPV drones and LED whoop gates."
+		content="Jacob Keil builds web applications, works with IT systems, and makes FPV drones and LED whoop gates while learning embedded systems."
 	/>
 	<meta property="og:title" content="Jacob Keil | Software &amp; Systems Engineer" />
 	<meta property="og:url" content="https://jacobkeil.com/" />
 	<link rel="canonical" href="https://jacobkeil.com/" />
 	<meta
 		property="og:description"
-		content="Software, IT systems, and hands-on embedded projects including FPV drones and LED whoop gates."
+		content="Web applications, IT systems, FPV drones, and folding LED whoop gates."
 	/>
 </svelte:head>
 
@@ -296,8 +296,8 @@
 				<p class="m-0 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-[#aaaaaa] uppercase"><span class="mr-2 inline-block size-[7px] rounded-full bg-accent align-[1px] shadow-[0_0_0_4px_rgb(237_117_90_/_12%)]"></span> Software · Systems · Hardware</p>
 				<h1 id="hero-title" class="my-[27px] mb-[23px] text-[clamp(3.1rem,5.7vw,5.4rem)] leading-[1.04] font-medium tracking-[-.035em] max-[800px]:text-[clamp(3.2rem,10vw,5.1rem)] max-[520px]:text-[clamp(2.85rem,12vw,4rem)]">Software &amp;<br /><em class="font-sans text-accent not-italic font-medium">systems engineer.</em></h1>
 				<p class="mb-[30px] max-w-[420px] text-[.97rem] leading-[1.8] text-[#c5c5c5] max-[520px]:text-[.89rem]">
-					My experience spans web applications, IT systems, and hands-on hardware. I’m expanding into embedded
-					systems through projects like custom FPV drones and LED-lit whoop gates.
+					I build web applications and work with IT systems. Outside of work, I build FPV drones and LED whoop gates
+					while learning embedded systems.
 				</p>
 				<div class="flex flex-wrap items-center gap-[14px] max-[520px]:gap-[10px]">
 					<a class="group inline-flex min-h-[49px] items-center justify-center gap-[25px] rounded-[9px] bg-paper px-[18px] text-[.76rem] font-bold text-carbon-black transition duration-150 hover:-translate-y-0.5 hover:bg-accent max-[520px]:min-h-[46px] max-[520px]:gap-[15px] max-[520px]:px-[13px] max-[520px]:text-[.7rem]" href="#projects">View projects <span class="text-accent transition-colors duration-150 group-hover:text-carbon-black" aria-hidden="true">↓</span></a>
@@ -327,7 +327,7 @@
 						alt=""
 						loading="eager"
 					/>
-					<span class="absolute right-[2%] bottom-[8%] z-[4] rounded-md border border-paper/25 bg-carbon-black/80 px-3 py-[9px] text-[.58rem] font-bold tracking-[.12em] text-paper uppercase">FPV · builds &amp; projects</span>
+					<span class="absolute right-[2%] bottom-[8%] z-[4] rounded-md border border-paper/25 bg-carbon-black/80 px-3 py-[9px] text-[.58rem] font-bold tracking-[.12em] text-paper uppercase">FPV drones &amp; gate builds</span>
 				</div>
 			</div>
 			<div class="absolute right-[7.5%] bottom-[27px] left-[7.5%] flex justify-end text-[.6rem] tracking-[.12em] text-[#aaaaaa] uppercase max-[800px]:right-[8%] max-[800px]:bottom-[22px] max-[800px]:left-[8%] max-[520px]:right-[25px] max-[520px]:left-[25px] max-[520px]:text-[.54rem]"><span>Portfolio · 2026</span></div>
@@ -339,7 +339,7 @@
 			<div class="mb-10 flex items-end justify-between gap-[30px] max-[800px]:items-start">
 				<div>
 					<p class="m-0 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-muted uppercase">University of South Florida</p>
-					<h2 id="work-title" class="mt-[11px] mb-0 text-[clamp(2.4rem,4vw,3.55rem)] leading-tight font-medium tracking-[-.035em] max-[520px]:text-[2.6rem]">Work projects<span class="text-accent">.</span></h2>
+					<h2 id="work-title" class="mt-[11px] mb-0 text-[clamp(2.4rem,4vw,3.55rem)] leading-tight font-medium tracking-[-.035em] max-[520px]:text-[2.6rem]">Work experience<span class="text-accent">.</span></h2>
 				</div>
 				<div class="mb-[5px] text-right text-[#aaaaaa] max-[800px]:text-left">
 					<p class="mb-[5px] text-[.79rem] font-semibold text-paper">Technology &amp; Systems Analyst</p>
@@ -352,8 +352,8 @@
 					<p class="m-0 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-muted uppercase">November 2023</p>
 					<h3 class="mt-[10px] mb-[9px] text-[1.7rem] font-medium tracking-[-.02em] text-paper">Personal Budget Calculator</h3>
 					<p class="mb-[17px] max-w-[610px] text-[.84rem] leading-[1.7] text-[#c5c5c5]">
-						Developed a semester cost calculator that gives students dollar-level estimates and lets them
-						save and revisit their calculations.
+						Created a semester cost calculator that estimates expenses down to the dollar. Students can save
+						results and return to them later.
 					</p>
 					<ul class="mb-0 flex list-none flex-wrap gap-[7px] p-0" aria-label="Technologies">
 						<li class="rounded-md border border-line px-2 py-[6px] text-[.61rem] text-[#c5c5c5]">SvelteKit</li>
@@ -382,8 +382,7 @@
 						</div>
 						<h4 class="mb-[9px] text-[1.18rem] font-medium tracking-[-.015em] text-paper">Lobby Queue System</h4>
 						<p class="m-0 text-[.79rem] leading-[1.7] text-[#c5c5c5]">
-							Built a real-time remote check-in queue so students could keep their place in line without
-							waiting in person. Added analytics to track queue volume and help plan staffing.
+							Built a live check-in queue so students could check in remotely and keep their place in line. Queue reports helped staff plan coverage.
 						</p>
 					</article>
 					<article class="rounded-[14px] border border-line bg-panel-soft px-[22px] py-[21px]">
@@ -393,8 +392,8 @@
 						</div>
 						<h4 class="mb-[9px] text-[1.18rem] font-medium tracking-[-.015em] text-paper">Internal Operations Portal</h4>
 						<p class="m-0 text-[.79rem] leading-[1.7] text-[#c5c5c5]">
-							Built an Azure SSO-enabled portal for tickets, referrals, appointments, training, and document
-							tracking. It replaced paper tasks and reduced the number of separate tools used by the office.
+							Built an Azure single sign-on portal for tickets, referrals, appointments, training, and document
+							tracking. It replaced paper forms and several separate tools.
 						</p>
 					</article>
 				</div>
@@ -409,9 +408,9 @@
 						<span class="text-[.68rem] text-muted">Jan 2019 to Nov 2022</span>
 					</div>
 					<ul class="m-0 grid list-disc gap-[7px] pl-[17px] text-[.79rem] leading-[1.65] text-[#c5c5c5] marker:text-accent">
-						<li>Imaged and onboarded workstations and helped train on-site staff.</li>
+						<li>Imaged workstations, set them up for users, and helped train on-site staff.</li>
 						<li>Configured and maintained switches, routers, load balancers, wireless infrastructure, and Active Directory.</li>
-						<li>Monitored systems with SolarWinds, responded to incidents, and resolved recurring issues.</li>
+						<li>Monitored systems in SolarWinds and resolved incidents and recurring issues.</li>
 					</ul>
 				</article>
 			</div>
@@ -469,8 +468,8 @@
 							{#if project.links.length}
 								<div class="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-1">
 									{#each project.links as link (link.href)}
-										<a class={`inline-flex min-h-11 items-center self-start text-[.77rem] font-bold transition-colors duration-150 ${link.label === 'Explore the build' ? 'rounded-[8px] bg-accent px-4 text-carbon-black hover:bg-paper' : 'hover:text-accent'}`} href={link.href} target={link.href.startsWith('/') ? undefined : '_blank'} rel={link.href.startsWith('/') ? undefined : 'noreferrer'}>
-											{link.label}<span class={`ml-[5px] ${link.label === 'Explore the build' ? 'text-carbon-black' : 'text-accent'}`} aria-hidden="true">{link.href.startsWith('/') ? '→' : '↗'}</span>
+											<a class={`inline-flex min-h-11 items-center self-start text-[.77rem] font-bold transition-colors duration-150 ${link.label === 'See the gate build' ? 'rounded-[8px] bg-accent px-4 text-carbon-black hover:bg-paper' : 'hover:text-accent'}`} href={link.href} target={link.href.startsWith('/') ? undefined : '_blank'} rel={link.href.startsWith('/') ? undefined : 'noreferrer'}>
+												{link.label}<span class={`ml-[5px] ${link.label === 'See the gate build' ? 'text-carbon-black' : 'text-accent'}`} aria-hidden="true">{link.href.startsWith('/') ? '→' : '↗'}</span>
 										</a>
 									{/each}
 								</div>
@@ -489,12 +488,12 @@
 			</div>
 			<div class="max-w-[500px] text-[.87rem] leading-[1.85] text-[#c5c5c5] max-[520px]:text-[.83rem]">
 				<p class="mb-[18px]">
-					My professional background is in full-stack web development and IT systems. I’ve built a live trivia
-					platform, a multi-stream viewing tool, and internal systems for university operations.
+					I’ve built a trivia platform, a multi-stream viewer, and software for university students and staff. My work
+					has also included IT systems and network support.
 				</p>
 				<p class="mb-[18px] last:mb-0">
-					I’m working toward embedded systems through practical FPV projects, including custom drone builds and
-					LED-lit folding whoop gates that combine 3D-printed parts, soldered wiring, WLED control, and shared power distribution.
+					Outside of work, I build FPV drones and folding LED whoop gates. The gates use 3D-printed joints,
+					soldered wiring, WLED, and one shared power supply.
 				</p>
 			</div>
 		</section>
@@ -509,7 +508,7 @@
 			</div>
 			<div class="grid grid-cols-[minmax(0,1.6fr)_minmax(260px,.8fr)] items-stretch gap-4 max-[800px]:grid-cols-1">
 				<div class="rounded-[14px] border border-line bg-panel p-6 max-[520px]:p-[19px]">
-					<p class="mb-[18px] text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-accent uppercase">Technical skills</p>
+					<p class="mb-[18px] text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-accent uppercase">Tools and languages</p>
 					<div class="grid">
 						<div class="grid grid-cols-[165px_minmax(0,1fr)] items-start gap-[18px] border-t border-line py-[14px] max-[520px]:grid-cols-1 max-[520px]:gap-2">
 							<h3 class="mt-[7px] mb-0 text-[.7rem] font-semibold tracking-[.06em] text-[#aaaaaa] uppercase">Languages</h3>
@@ -573,19 +572,19 @@
 			<div class="mb-[25px]">
 				<p class="m-0 flex items-center gap-2 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-muted uppercase">
 					<span class="relative size-[7px] flex-none rounded-full bg-accent after:absolute after:-inset-1 after:rounded-full after:border after:border-accent/55 after:content-[''] after:animate-learning-pulse motion-reduce:after:animate-none" aria-hidden="true"></span>
-					Currently learning <span class="border border-accent/30 px-[6px] py-[3px] text-[.52rem] tracking-[.12em] text-accent">Live</span>
+					Learning <span class="border border-accent/30 px-[6px] py-[3px] text-[.52rem] tracking-[.12em] text-accent">In progress</span>
 				</p>
 				<h2 id="learning-title" class="mt-[9px] mb-0 text-[clamp(2rem,3vw,2.8rem)] font-medium tracking-[-.03em]">Embedded systems<span class="text-accent">.</span></h2>
 			</div>
 			<article class="mb-[18px] grid grid-cols-1 gap-[14px] rounded-[14px] border border-line bg-panel p-[22px]">
 				<div>
-					<p class="m-0 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-accent uppercase">Hands-on experience · 1 year</p>
+					<p class="m-0 text-[.68rem] leading-[1.5] font-bold tracking-[.15em] text-accent uppercase">Building FPV drones · 1 year</p>
 					<h3 class="mt-2 mb-0 text-[1.25rem] font-medium tracking-[-.015em]">FPV drone racing</h3>
 				</div>
 				<div>
 					<p class="mb-[14px] text-[.82rem] leading-[1.7] text-[#c5c5c5]">
-						Built and soldered custom drones, debugged UART connections and other system issues, flashed
-						firmware, configured TX/RX equipment, and troubleshot connected systems.
+						Built and soldered custom drones, debugged UART connections, flashed firmware, configured radio
+						equipment, and tracked down hardware and system issues.
 					</p>
 					<ul class="mb-0 flex list-none flex-wrap gap-[7px] p-0" aria-label="Drone racing experience">
 						<li class="rounded-md border border-line px-2 py-[6px] text-[.61rem] text-[#c5c5c5]">Custom drone soldering</li>
@@ -610,14 +609,14 @@
 					</div>
 				</div>
 			</article>
-			<div class="relative overflow-hidden rounded-[14px] border border-line bg-[radial-gradient(ellipse_at_50%_0%,rgb(237_117_90_/_12%),transparent_48%),#1e1e1e] p-6 max-[520px]:p-[14px]" role="group" aria-label="Current learning topics and how they connect">
+			<div class="relative overflow-hidden rounded-[14px] border border-line bg-[radial-gradient(ellipse_at_50%_0%,rgb(237_117_90_/_12%),transparent_48%),#1e1e1e] p-6 max-[520px]:p-[14px]" role="group" aria-label="Embedded systems study topics">
 				<svg class="pointer-events-none absolute top-[116px] left-0 z-0 h-[60px] w-full max-[520px]:hidden" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
 					<path class="fill-none stroke-accent/45 [stroke-width:1.5px] [vector-effect:non-scaling-stroke]" d="M500 0 V22 H166 V60" />
 					<path class="fill-none stroke-accent/45 [stroke-width:1.5px] [vector-effect:non-scaling-stroke]" d="M500 0 V60" />
 					<path class="fill-none stroke-accent/45 [stroke-width:1.5px] [vector-effect:non-scaling-stroke]" d="M500 0 V22 H834 V60" />
 				</svg>
 				<article class="relative z-10 mx-auto flex min-h-[92px] max-w-[390px] flex-col items-center justify-center rounded-xl border border-accent/70 bg-[#292929] px-5 py-4 text-center shadow-[0_12px_32px_rgb(0_0_0_/_24%)]">
-					<span class="inline-flex items-center gap-[7px] text-[.57rem] font-bold tracking-[.13em] text-accent uppercase"><span class="size-[6px] rounded-full bg-accent" aria-hidden="true"></span>Current focus</span>
+					<span class="inline-flex items-center gap-[7px] text-[.57rem] font-bold tracking-[.13em] text-accent uppercase"><span class="size-[6px] rounded-full bg-accent" aria-hidden="true"></span>Study plan</span>
 					<h3 class="mt-[7px] mb-0 text-base leading-[1.35] font-medium tracking-[-.01em]">Embedded systems engineering</h3>
 				</article>
 				<div class="relative z-10 mt-12 grid grid-cols-3 gap-[14px] max-[520px]:mt-[14px] max-[520px]:grid-cols-1 max-[520px]:gap-[10px]">
@@ -702,7 +701,7 @@
 			</button>
 			<figure class="m-0 grid min-w-0 justify-items-center gap-[11px]">
 				<img
-					class="block h-[min(70vh,760px)] w-full object-contain max-[520px]:h-[min(62vh,620px)]"
+					class="block h-[min(70vh,760px)] w-full rounded-xl object-contain max-[520px]:h-[min(62vh,620px)]"
 					src={activeGallery.photos[activePhotoIndex].src}
 					alt={activeGallery.photos[activePhotoIndex].alt}
 				/>
