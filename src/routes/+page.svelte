@@ -299,12 +299,12 @@
 					My experience spans web applications, IT systems, and hands-on hardware. I’m expanding into embedded
 					systems through projects like custom FPV drones and LED-lit whoop gates.
 				</p>
-				<div class="flex flex-wrap items-center gap-[25px] max-[520px]:gap-[19px]">
-					<a class="inline-flex min-h-[49px] items-center justify-center gap-[25px] rounded-[9px] bg-paper px-[18px] text-[.76rem] font-bold text-carbon-black transition duration-150 hover:-translate-y-0.5 hover:bg-accent max-[520px]:min-h-[46px] max-[520px]:gap-[15px] max-[520px]:px-[13px] max-[520px]:text-[.7rem]" href="#projects">View projects <span class="text-accent" aria-hidden="true">↓</span></a>
-					<a class="text-[.77rem] font-bold text-paper transition-colors duration-150 hover:text-accent max-[520px]:text-[.7rem]" href="mailto:jacobkeil13@gmail.com">Email me <span class="ml-[5px] text-accent" aria-hidden="true">↗</span></a>
-					<button class="cursor-pointer border-0 bg-transparent p-0 font-sans text-[.77rem] font-bold text-paper transition-colors duration-150 hover:text-accent max-[520px]:text-[.7rem]" type="button" onclick={(event) => openResume(event.currentTarget)}>
-						View résumé <span class="ml-[5px] text-accent" aria-hidden="true">↗</span>
+				<div class="flex flex-wrap items-center gap-[14px] max-[520px]:gap-[10px]">
+					<a class="group inline-flex min-h-[49px] items-center justify-center gap-[25px] rounded-[9px] bg-paper px-[18px] text-[.76rem] font-bold text-carbon-black transition duration-150 hover:-translate-y-0.5 hover:bg-accent max-[520px]:min-h-[46px] max-[520px]:gap-[15px] max-[520px]:px-[13px] max-[520px]:text-[.7rem]" href="#projects">View projects <span class="text-accent transition-colors duration-150 group-hover:text-carbon-black" aria-hidden="true">↓</span></a>
+					<button class="inline-flex min-h-[49px] cursor-pointer items-center justify-center gap-[25px] rounded-[9px] border-0 bg-accent px-[18px] font-sans text-[.76rem] font-bold text-carbon-black transition duration-150 hover:-translate-y-0.5 hover:bg-paper max-[520px]:min-h-[46px] max-[520px]:gap-[15px] max-[520px]:px-[13px] max-[520px]:text-[.7rem]" type="button" onclick={(event) => openResume(event.currentTarget)}>
+						View resume <span aria-hidden="true">↗</span>
 					</button>
+					<a class="inline-flex min-h-[49px] items-center justify-center gap-[12px] rounded-[9px] border border-line bg-[#303030] px-[18px] text-[.76rem] font-bold text-paper transition-colors duration-150 hover:border-accent hover:text-accent max-[520px]:min-h-[46px] max-[520px]:px-[13px] max-[520px]:text-[.7rem]" href="mailto:jacobkeil13@gmail.com">Email me <span class="text-accent" aria-hidden="true">↗</span></a>
 				</div>
 			</div>
 			<div class="relative grid aspect-square w-full max-w-[440px] place-items-center justify-self-end max-[800px]:mx-auto max-[800px]:mt-[35px] max-[800px]:mb-1 max-[800px]:w-[min(76%,350px)] max-[800px]:justify-self-center max-[520px]:w-[86%]" aria-hidden="true">
@@ -431,14 +431,14 @@
 
 			<div class="grid grid-cols-2 gap-[23px] max-[800px]:grid-cols-1 max-[800px]:gap-[18px]">
 				{#each projects as project (project.number)}
-					<article class={`flex min-h-full flex-col overflow-hidden rounded-[14px] border border-line bg-panel p-[14px] transition-[transform,box-shadow] duration-[180ms] hover:-translate-y-1 hover:shadow-[0_18px_45px_rgb(0_0_0_/_18%)] max-[520px]:p-[11px] ${project.visual === 'gates' ? 'col-span-full max-[800px]:col-auto' : ''}`}>
-						<div class={`relative grid place-items-center overflow-hidden rounded-[9px] ${project.visual === 'clover' ? 'h-[260px] bg-[#f7f8f7] max-[800px]:h-[250px] max-[520px]:h-[225px]' : project.visual === 'caster' ? 'h-[260px] bg-[#131313] max-[800px]:h-[250px] max-[520px]:h-[225px]' : 'order-1 h-auto min-h-0 w-full bg-[radial-gradient(ellipse_at_50%_56%,rgb(237_117_90_/_12%),transparent_55%),#1e1e1e]'}`} aria-hidden={project.visual !== 'gates'}>
+					<article class={`flex min-h-full flex-col overflow-hidden rounded-[14px] border border-line bg-panel p-[14px] transition-[translate,box-shadow,border-color] duration-[220ms] ease-[cubic-bezier(.4,0,.2,1)] hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_14px_32px_rgb(0_0_0_/_16%)] motion-reduce:transition-none max-[520px]:p-[11px] ${project.visual === 'gates' ? 'col-span-full max-[800px]:col-auto' : ''}`}>
+						<div class={`relative grid place-items-center overflow-hidden rounded-[9px] p-[10px] ${project.visual === 'clover' ? 'h-[260px] max-[800px]:h-[250px] max-[520px]:h-[225px]' : project.visual === 'caster' ? 'h-[260px] max-[800px]:h-[250px] max-[520px]:h-[225px]' : 'order-1 h-auto min-h-0 w-full bg-[radial-gradient(ellipse_at_50%_56%,rgb(237_117_90_/_12%),transparent_55%),#1e1e1e]'}`} aria-hidden={project.visual !== 'gates'}>
 							{#if project.visual === 'clover'}
-							<img class="block size-full object-contain" src="/clover-trivia.png" alt="" loading="lazy" />
+							<img class="block size-full rounded-[8px] object-contain" src="/clover-trivia.png" alt="" loading="lazy" />
 							{:else if project.visual === 'caster'}
-							<img class="block size-full object-contain" src="/castercurse.png" alt="" loading="lazy" />
+							<img class="block size-full rounded-[8px] object-contain" src="/castercurse.png" alt="" loading="lazy" />
 							{:else}
-							<div class="grid w-full grid-cols-4 gap-[10px] p-2 max-[800px]:grid-cols-2" role="group" aria-label="Photos of the folding LED whoop gates">
+							<div class="grid w-full grid-cols-4 gap-[10px] max-[800px]:grid-cols-2" role="group" aria-label="Photos of the folding LED whoop gates">
 									{#each gatePhotos as photo, index (photo.src)}
 									<figure class="relative aspect-[1.4] min-w-0 overflow-hidden rounded-[7px] bg-panel-soft">
 											<button
@@ -454,7 +454,7 @@
 								</div>
 							{/if}
 						</div>
-						<div class={`flex flex-1 flex-col px-[10px] pt-5 pb-[9px] ${project.visual === 'gates' ? 'order-[-1] px-[26px] py-6 max-[800px]:px-2 max-[800px]:pt-[18px] max-[800px]:pb-2' : ''}`}>
+						<div class={`flex flex-1 flex-col p-[10px] ${project.visual === 'gates' ? 'order-[-1]' : ''}`}>
 							<div class="flex items-center justify-between">
 								<p class="mb-0 text-[.62rem] font-bold tracking-[.1em] text-muted uppercase">{project.kind}</p>
 								<span class="font-serif text-[.85rem] text-accent">{project.number}</span>
@@ -469,8 +469,8 @@
 							{#if project.links.length}
 								<div class="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-1">
 									{#each project.links as link (link.href)}
-										<a class="inline-block self-start text-[.77rem] font-bold transition-colors duration-150 hover:text-accent" href={link.href} target={link.href.startsWith('/') ? undefined : '_blank'} rel={link.href.startsWith('/') ? undefined : 'noreferrer'}>
-											{link.label}<span class="ml-[5px] text-accent" aria-hidden="true">{link.href.startsWith('/') ? '→' : '↗'}</span>
+										<a class={`inline-flex min-h-11 items-center self-start text-[.77rem] font-bold transition-colors duration-150 ${link.label === 'Explore the build' ? 'rounded-[8px] bg-accent px-4 text-carbon-black hover:bg-paper' : 'hover:text-accent'}`} href={link.href} target={link.href.startsWith('/') ? undefined : '_blank'} rel={link.href.startsWith('/') ? undefined : 'noreferrer'}>
+											{link.label}<span class={`ml-[5px] ${link.label === 'Explore the build' ? 'text-carbon-black' : 'text-accent'}`} aria-hidden="true">{link.href.startsWith('/') ? '→' : '↗'}</span>
 										</a>
 									{/each}
 								</div>
@@ -610,28 +610,33 @@
 					</div>
 				</div>
 			</article>
-			<div class="relative min-h-[330px] overflow-hidden rounded-[14px] border border-line bg-[radial-gradient(ellipse_at_50%_50%,rgb(237_117_90_/_9%),transparent_42%),#1e1e1e] max-[520px]:grid max-[520px]:min-h-0 max-[520px]:gap-[10px] max-[520px]:p-[14px]" role="group" aria-label="Current learning topics and how they connect">
-				<svg class="absolute inset-0 size-full max-[520px]:hidden" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
-					<path class="fill-none stroke-[#666] [stroke-width:1.5px] [stroke-dasharray:4_10] [vector-effect:non-scaling-stroke] animate-learning-flow motion-reduce:animate-none" d="M500 300 C400 235 300 175 180 130" />
-					<path class="fill-none stroke-[#666] [stroke-width:1.5px] [stroke-dasharray:4_10] [vector-effect:non-scaling-stroke] animate-learning-flow motion-reduce:animate-none" d="M500 300 C600 235 700 175 820 130" />
-					<path class="fill-none stroke-[#666] [stroke-width:1.5px] [stroke-dasharray:4_10] [vector-effect:non-scaling-stroke] animate-learning-flow motion-reduce:animate-none" d="M500 300 C500 365 500 430 500 510" />
+			<div class="relative overflow-hidden rounded-[14px] border border-line bg-[radial-gradient(ellipse_at_50%_0%,rgb(237_117_90_/_12%),transparent_48%),#1e1e1e] p-6 max-[520px]:p-[14px]" role="group" aria-label="Current learning topics and how they connect">
+				<svg class="pointer-events-none absolute top-[116px] left-0 z-0 h-[60px] w-full max-[520px]:hidden" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
+					<path class="fill-none stroke-accent/45 [stroke-width:1.5px] [vector-effect:non-scaling-stroke]" d="M500 0 V22 H166 V60" />
+					<path class="fill-none stroke-accent/45 [stroke-width:1.5px] [vector-effect:non-scaling-stroke]" d="M500 0 V60" />
+					<path class="fill-none stroke-accent/45 [stroke-width:1.5px] [vector-effect:non-scaling-stroke]" d="M500 0 V22 H834 V60" />
 				</svg>
-				<article class="absolute top-[37%] left-[35%] flex min-h-[88px] w-[30%] flex-col justify-center rounded-xl border border-accent bg-[#333] px-[17px] py-[14px] shadow-[0_8px_24px_rgb(0_0_0_/_16%)] transition-[border-color,transform] duration-[180ms] hover:-translate-y-0.5 max-[520px]:relative max-[520px]:top-auto max-[520px]:right-auto max-[520px]:bottom-auto max-[520px]:left-auto max-[520px]:min-h-[72px] max-[520px]:w-auto max-[520px]:border-line">
-					<span class="text-[.57rem] font-bold tracking-[.13em] text-accent uppercase">Current focus</span>
+				<article class="relative z-10 mx-auto flex min-h-[92px] max-w-[390px] flex-col items-center justify-center rounded-xl border border-accent/70 bg-[#292929] px-5 py-4 text-center shadow-[0_12px_32px_rgb(0_0_0_/_24%)]">
+					<span class="inline-flex items-center gap-[7px] text-[.57rem] font-bold tracking-[.13em] text-accent uppercase"><span class="size-[6px] rounded-full bg-accent" aria-hidden="true"></span>Current focus</span>
 					<h3 class="mt-[7px] mb-0 text-base leading-[1.35] font-medium tracking-[-.01em]">Embedded systems engineering</h3>
 				</article>
-				<article class="absolute top-[10%] left-[6%] flex min-h-[76px] w-1/4 flex-col justify-center rounded-xl border border-line bg-[#303030] px-[17px] py-[14px] shadow-[0_8px_24px_rgb(0_0_0_/_16%)] transition-[border-color,transform] duration-[180ms] hover:-translate-y-0.5 hover:border-accent max-[520px]:relative max-[520px]:top-auto max-[520px]:right-auto max-[520px]:bottom-auto max-[520px]:left-auto max-[520px]:min-h-[72px] max-[520px]:w-auto">
-					<span class="text-[.57rem] font-bold tracking-[.13em] text-accent uppercase">Language</span>
-					<h3 class="mt-[7px] mb-0 text-[.91rem] leading-[1.35] font-medium tracking-[-.01em]">C/C++</h3>
-				</article>
-				<article class="absolute top-[10%] right-[6%] flex min-h-[76px] w-1/4 flex-col justify-center rounded-xl border border-line bg-[#303030] px-[17px] py-[14px] shadow-[0_8px_24px_rgb(0_0_0_/_16%)] transition-[border-color,transform] duration-[180ms] hover:-translate-y-0.5 hover:border-accent max-[520px]:relative max-[520px]:top-auto max-[520px]:right-auto max-[520px]:bottom-auto max-[520px]:left-auto max-[520px]:min-h-[72px] max-[520px]:w-auto">
-					<span class="text-[.57rem] font-bold tracking-[.13em] text-accent uppercase">Systems</span>
-					<h3 class="mt-[7px] mb-0 text-[.91rem] leading-[1.35] font-medium tracking-[-.01em]">RTOS</h3>
-				</article>
-				<article class="absolute bottom-[7%] left-[37.5%] flex min-h-[76px] w-1/4 flex-col justify-center rounded-xl border border-line bg-[#303030] px-[17px] py-[14px] shadow-[0_8px_24px_rgb(0_0_0_/_16%)] transition-[border-color,transform] duration-[180ms] hover:-translate-y-0.5 hover:border-accent max-[520px]:relative max-[520px]:top-auto max-[520px]:right-auto max-[520px]:bottom-auto max-[520px]:left-auto max-[520px]:min-h-[72px] max-[520px]:w-auto">
-					<span class="text-[.57rem] font-bold tracking-[.13em] text-accent uppercase">Hardware</span>
-					<h3 class="mt-[7px] mb-0 text-[.91rem] leading-[1.35] font-medium tracking-[-.01em]">Electronics</h3>
-				</article>
+				<div class="relative z-10 mt-12 grid grid-cols-3 gap-[14px] max-[520px]:mt-[14px] max-[520px]:grid-cols-1 max-[520px]:gap-[10px]">
+					<article class="min-h-[116px] rounded-xl border border-line bg-[#292929]/95 px-5 py-[18px] shadow-[0_8px_24px_rgb(0_0_0_/_15%)] transition-[border-color,transform] duration-[180ms] hover:-translate-y-0.5 hover:border-accent max-[520px]:min-h-0">
+						<span class="mb-[13px] inline-flex size-7 items-center justify-center rounded-full bg-accent/10 text-[.59rem] font-bold text-accent">01</span>
+						<p class="m-0 text-[.57rem] font-bold tracking-[.13em] text-muted uppercase">Language</p>
+						<h3 class="mt-[5px] mb-0 text-[.96rem] leading-[1.35] font-medium">C/C++</h3>
+					</article>
+					<article class="min-h-[116px] rounded-xl border border-line bg-[#292929]/95 px-5 py-[18px] shadow-[0_8px_24px_rgb(0_0_0_/_15%)] transition-[border-color,transform] duration-[180ms] hover:-translate-y-0.5 hover:border-accent max-[520px]:min-h-0">
+						<span class="mb-[13px] inline-flex size-7 items-center justify-center rounded-full bg-accent/10 text-[.59rem] font-bold text-accent">02</span>
+						<p class="m-0 text-[.57rem] font-bold tracking-[.13em] text-muted uppercase">Hardware</p>
+						<h3 class="mt-[5px] mb-0 text-[.96rem] leading-[1.35] font-medium">Electronics</h3>
+					</article>
+					<article class="min-h-[116px] rounded-xl border border-line bg-[#292929]/95 px-5 py-[18px] shadow-[0_8px_24px_rgb(0_0_0_/_15%)] transition-[border-color,transform] duration-[180ms] hover:-translate-y-0.5 hover:border-accent max-[520px]:min-h-0">
+						<span class="mb-[13px] inline-flex size-7 items-center justify-center rounded-full bg-accent/10 text-[.59rem] font-bold text-accent">03</span>
+						<p class="m-0 text-[.57rem] font-bold tracking-[.13em] text-muted uppercase">Systems</p>
+						<h3 class="mt-[5px] mb-0 text-[.96rem] leading-[1.35] font-medium">RTOS</h3>
+					</article>
+				</div>
 			</div>
 		</section>
 
@@ -726,7 +731,7 @@
 			class="absolute inset-0 size-full cursor-default border-0 bg-black/50 p-0 backdrop-blur-[3px]"
 			type="button"
 			tabindex="-1"
-			aria-label="Close résumé viewer"
+			aria-label="Close resume viewer"
 			onclick={() => void closeResume()}
 		></button>
 		<section
@@ -739,14 +744,14 @@
 			<button
 				class="absolute top-3 right-3 grid size-10 cursor-pointer place-items-center border-0 bg-transparent p-0 text-paper transition-colors hover:text-accent"
 				type="button"
-				aria-label="Close résumé viewer"
+				aria-label="Close resume viewer"
 				bind:this={resumeCloseButton}
 				onclick={() => void closeResume()}
 			>
 				<span class="text-[2rem] leading-none font-light" aria-hidden="true">×</span>
 			</button>
 			<header class="flex flex-none items-center justify-between gap-[18px] pr-[52px] pt-1 pb-4 pl-0 max-[520px]:flex-col max-[520px]:items-start max-[520px]:gap-3 max-[520px]:pr-[42px] max-[520px]:pt-0 max-[520px]:pb-3">
-				<h2 id="resume-modal-title" class="m-0 text-[1.35rem] font-semibold">Résumé</h2>
+				<h2 id="resume-modal-title" class="m-0 text-[1.35rem] font-semibold">Resume</h2>
 				<div class="flex items-center gap-[18px] max-[520px]:flex-wrap max-[520px]:gap-3">
 					<a class="inline-flex min-h-10 items-center justify-center gap-3 rounded-[9px] bg-paper px-[13px] text-[.76rem] font-bold text-carbon-black transition duration-150 hover:-translate-y-0.5 hover:bg-accent max-[520px]:min-h-[38px] max-[520px]:text-[.68rem]" href="/Resume_Final.pdf" download="Jacob-Keil-Resume.pdf">
 						Download PDF <span aria-hidden="true">↓</span>
@@ -756,7 +761,7 @@
 					</a>
 				</div>
 			</header>
-			<iframe class="min-h-0 w-full flex-1 rounded-md border-0 bg-white" src="/Resume_Final.pdf" title="Jacob Keil résumé"></iframe>
+			<iframe class="min-h-0 w-full flex-1 rounded-md border-0 bg-white" src="/Resume_Final.pdf" title="Jacob Keil resume"></iframe>
 		</section>
 	</div>
 {/if}
